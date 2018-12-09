@@ -7,7 +7,7 @@ import Choice from '../App/Choice'
 var styles = {
   backgroundImage: 'url(' + 'assets/img/coffee.jpg' + ')',
   backgroundSize: 'cover',
-    overflow: 'auto',
+  overflow: 'auto',
 
 };
 var container ={
@@ -177,9 +177,40 @@ class Home extends Component {
     let ImgVar = '';
     var style = {
       color: 'white',
-      fontSize: 40,
-      marginBottom: 30
+      fontSize: 70,
+      marginBottom: 10,
+      fontFamily: 'SignPainter',
     };
+    var buttonStyle = {
+      borderRadius: 25,
+      marginTop: 10,
+      labelColor: '#FFFFFF',
+      height: 30,
+      width: 100,
+      fontSize: 15,
+      fontWeight: 'bold',
+      color: 'white',
+      border: 'none',
+      backgroundImage: 'url(' + 'assets/img/button3D.jpg' + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }
+    var boxStyle = {
+      borderRadius: 25,
+      height: 25,
+      width: 250,
+      fontSize: 20,
+      textMargin: 10,
+      borderColor: '#D2AF6E',
+    }
+    var boxStyle2 = {
+      borderRadius: 25,
+      fontSize: 20,
+      marginTop: 10,
+      height: 25,
+      width: 250,
+      borderColor: '#D2AF6E',
+    }
       const {
         isLoading,
         token,
@@ -198,7 +229,7 @@ class Home extends Component {
       if (!token) {
         return (
 
-          <div className='background-image' style ={ { backgroundImage: "url(assets/img/coffee.jpg)", backgroundSize: 'cover', backgroundPosition: 'center', height: 500} }>
+          <div className='background-image' style ={ { backgroundImage: "url(assets/img/coffee.jpg)", backgroundSize: 'cover', backgroundPosition: 'center', height: 575} }>
           <img src={ImgVar} />
             <div style={{color: "white"}}>
               {
@@ -209,25 +240,25 @@ class Home extends Component {
               <p style = {style}>Welcome Back</p>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="  Email"
                 value={this.state.signInEmail}
+                style={boxStyle}
                 onChange={this.handleChange}
                 id="signInEmail"
               />
               <br />
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="  Password"
                 value={this.state.signInPassword}
+                style={boxStyle2}
                 onChange={this.handleChange}
                 id="signInPassword"
               />
               <br />
-              <button onClick={this.onSignIn}>Sign In</button>
-            </div>
-            <br />
-            <br />
-            <div style = {{marginBottom: 100, backgroundColor: 'transparent', color: "white"}}>
+              <button style={buttonStyle} onClick={this.onSignIn}>SIGN IN</button>
+            </div>            
+            <div style = {{marginBottom: 100, marginTop: 0, backgroundColor: 'transparent', color: "white"}}>
               {
                 (signUpError) ? (
                   <p>{signUpError}</p>
@@ -236,19 +267,21 @@ class Home extends Component {
               <p style = {style}>Join Us</p>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="  Email"
                 value={this.state.signUpEmail}
+                style={boxStyle}
                 onChange={this.handleChange}
                 id="signUpEmail"
               /><br />
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="  Password"
                 value={this.state.signUpPassword}
+                style={boxStyle2}
                 onChange={this.handleChange}
                 id="signUpPassword"
               /><br />
-              <button onClick={this.onSignUp}>Sign Up</button>
+              <button style={buttonStyle} onClick={this.onSignUp}>SIGN UP</button>
             </div>
          </div>
         );
