@@ -9,11 +9,11 @@ var style1 = {
   fontFamily: 'Hoefler Text !important',
   backgroundColor: 'transparent',
   backgroundImage: "url(assets/img/c.jpg)",
-  borderBottomWidth: 6,
+  borderBottomWidth: 1,
   borderLeftWidth: 0,
   borderRightWidth:0,
   borderTopWidth:0,
-  // borderStyle: 'solid',
+  borderStyle: 'solid',
   borderColor: 'white',
   overflow: 'none',
   
