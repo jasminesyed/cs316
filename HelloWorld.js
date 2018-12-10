@@ -1,7 +1,7 @@
 import React from 'react';
 
 var image = {
-	backgroundImage: "url(assets/img/friendscoffee.jpg)",
+	backgroundImage: "url(assets/img/cafe123.jpg)",
 	backgroundSize: 'cover',
     backgroundPosition: 'center',
     overflow: 'auto',
@@ -9,7 +9,7 @@ var image = {
 }
 var style1 = {
   color: 'white',
-  fontSize: 25,
+  fontSize: 20,
   textAlign: 'center',
   fontWeight: 'bold',
   fontFamily: 'Hoefler Text',
@@ -20,7 +20,7 @@ var style1 = {
   borderTopWidth:0,
   borderStyle: 'solid',
   borderColor: 'white',
-  overflow: 'auto',
+  overflow: 'hidden',
   height: 750,
 
 };
