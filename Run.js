@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import { setInStorage, getFromStorage,} from '../../utils/storage';
 //import 'whatwg-fetch';
+let ImgVar = ''
 
 class Run extends Component {
   constructor(props) {
@@ -97,18 +98,24 @@ run(){
 if(!this.state.runCreated){
     return(
       <div>
+      <div className='background-image' style ={ { backgroundImage: "url(assets/img/delivery.jpg)", backgroundSize: 'cover', backgroundPosition: 'center', height: 575} }>
+    <img src={ImgVar} />
       <select value={this.state.value} onChange={this.handleChange} id="eatery">
             {listItems}
       </select>
       <input type="number" placeholder="item limit"  onInput={this.incrementDecrementLimit} onChange={this.onChange} id="itemLimit"/>
       <button onClick={this.onSubmit}> Create Run </button>
       </div>
+      </div>
     )
   }
 return(
+    <div className='background-image' style ={ { backgroundImage: "url(assets/img/runs.jpg)", backgroundSize: 'cover', backgroundPosition: 'center', height: 575} }>
+    <img src={ImgVar} />
   <div>
     <p>Accepting Orders</p>
     <button onClick={this.run}>Run</button>
+  </div>
   </div>
 )
 }
