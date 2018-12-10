@@ -71,7 +71,7 @@ class Choice extends Component {
           <span>
           </span>
         </div>
-        <p style = {desc}> Find Me Coffee </p>
+        <p style = {desc}> Find Coffee Nearby</p>
         <button style = {buttonStyle}>
          <Link to={{pathname:"/activeruns", state: { token: this.props.token }}} style ={{textDecoration: 'none', color:'white'}}>Order</Link>
         </button>

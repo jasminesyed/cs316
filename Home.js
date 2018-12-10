@@ -20,7 +20,7 @@ class Home extends Component {
       super(props);
       this.state = {
         isLoading: true,
-        token: '',
+        token: 'a',
         signUpError: '',
         signInError: '',
         signInEmail: '',
@@ -194,7 +194,25 @@ class Home extends Component {
       backgroundImage: 'url(' + 'assets/img/button3D.jpg' + ')',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      overflow: 'hidden',
     }
+    var buttonStyle2 = {
+      borderRadius: 25,
+      marginTop: 10,
+      labelColor: '#FFFFFF',
+      height: 30,
+      width: 100,
+      fontSize: 15,
+      color: 'white',
+      border: 'none',
+      backgroundImage: 'url(' + 'assets/img/buttonC.jpg' + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      overflow: 'auto',
+      marginRight: 1300,
+      marginLeft:10,
+    }
+    
     var boxStyle = {
       borderRadius: 25,
       height: 25,
@@ -231,7 +249,7 @@ class Home extends Component {
 
           <div className='background-image' style ={ { backgroundImage: "url(assets/img/coffee.jpg)", backgroundSize: 'cover', backgroundPosition: 'center', height: 575} }>
           <img src={ImgVar} />
-            <div style={{color: "white"}}>
+            <div style={{color: "white", marginTop:0, marginBottom:0}}>
               {
                 (signInError) ? (
                   <p>{signInError}</p>
@@ -288,9 +306,8 @@ class Home extends Component {
       }
       return (
         <div>
-          <p>Account</p>
-          <button onClick={this.logout}>Logout</button>
-          <Choice token={this.state.token}/>
+        <Choice token={this.state.token}/>
+        <button style = {buttonStyle2} onClick={this.logout}>Logout</button>
         </div>
 
       );
