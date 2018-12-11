@@ -1,0 +1,2 @@
+Eatery_ID int PRIMARY KEY,
+Name varchar(45)

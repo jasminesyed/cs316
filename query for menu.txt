@@ -1,0 +1,6 @@
+Eatery_ID varchar(35),
+Item_ID varchar(35) PRIMARY KEY,
+Name varchar(35),
+Size varchar(35),
+Price float,
+Category varchar(50)
